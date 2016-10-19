@@ -1,6 +1,8 @@
 # itu
 Interaktivní připomínkovač medikace pro seniory
 
+**[Zdielany dokument](https://docs.google.com/document/d/1l9X5xoZuw8tNnKO0qQN4bDXJB0FipHK9GtRl1IwkdhQ/edit?usp=sharing)**
+
 |        | Phase                          | Check-point  |
 |--------|--------------------------------|--------------|
 | 19.9.  |                                |              |
