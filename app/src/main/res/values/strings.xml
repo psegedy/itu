@@ -1,0 +1,6 @@
+<resources>
+	<string name="app_name">Pripomienkovac</string>
+	<string name="button_one_title">Make notification</string>
+	<string name="button_two_title">Schedule notification</string>
+
+</resources>
