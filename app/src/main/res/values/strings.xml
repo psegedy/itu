@@ -1,6 +1,24 @@
 <resources>
-	<string name="app_name">Pripomienkovac</string>
-	<string name="button_one_title">Make notification</string>
-	<string name="button_two_title">Schedule notification</string>
+    <string name="app_name">Pripomienkovac</string>
+    <string name="button_one_title">Make notification</string>
+    <string name="button_two_title">Schedule notification</string>
 
+    <string name="next">&gt;</string>
+    <string name="skip">&lt;</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Ibalgin 400</string>
+    <string name="slide_1_desc">Liek proti bolesti</string>
+    <string name="slide_1_cont">ibuprofen 400 mg</string>
+    <string name="slide_1_usage">po jedle</string>
+
+    <string name="slide_2_title">Essentiale Forte N</string>
+    <string name="slide_2_desc">Rastlinný liek na ochorenie pečene</string>
+    <string name="slide_2_cont">phospholipida sojae praeparata 300mg</string>
+    <string name="slide_2_usage">pred jedlom</string>
+
+    <string name="slide_3_title">Maltofer Fol</string>
+    <string name="slide_3_desc">Perorálna terapia železom</string>
+    <string name="slide_3_cont">100mg železa, 0,35mg kyseliny listovej</string>
+    <string name="slide_3_usage">po jedle</string>
 </resources>

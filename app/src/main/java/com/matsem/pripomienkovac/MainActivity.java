@@ -84,4 +84,9 @@ public class MainActivity extends AppCompatActivity {
 		builder.setSmallIcon(R.mipmap.ic_launcher);
 		return builder.build();
 	}
+
+	public void viewPills(View view){
+		Intent intent = new Intent(this, PillSlideActivity.class);
+		startActivity(intent);
+	}
 }
