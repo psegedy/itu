@@ -1,65 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/bg_pill">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_pill">
-
+    android:orientation="horizontal">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:layout_width="15dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
-        <ImageView
-            android:layout_width="@dimen/img_width_height"
-            android:layout_height="@dimen/img_width_height"
-            android:src="@drawable/pill12"
-            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/slide_3_title"
-                android:textColor="@color/pill_title"
-                android:textSize="@dimen/slide_title"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:paddingLeft="@dimen/desc_padding"
-                android:paddingRight="@dimen/desc_padding"
-                android:text="@string/slide_3_desc"
-                android:textAlignment="center"
-                android:textColor="@color/pill_content"
-                android:textSize="@dimen/slide_desc" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="@dimen/desc_padding"
-                android:paddingRight="@dimen/desc_padding"
-                android:text="@string/slide_3_cont"
-                android:textAlignment="center"
-                android:textColor="@color/pill_content"
-                android:textSize="@dimen/slide_desc" />
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
             <ImageView
-                android:src="@drawable/meal_with"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                android:src="@drawable/pill12"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/desc_padding"
-                android:onClick="viewWithMeal"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/slide_3_title"
+                    android:textColor="@color/pill_title"
+                    android:textSize="@dimen/slide_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="@dimen/desc_padding"
+                    android:paddingRight="@dimen/desc_padding"
+                    android:text="@string/slide_3_desc"
+                    android:textAlignment="center"
+                    android:textColor="@color/pill_content"
+                    android:textSize="@dimen/slide_desc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="@dimen/desc_padding"
+                    android:paddingRight="@dimen/desc_padding"
+                    android:text="@string/slide_3_cont"
+                    android:textAlignment="center"
+                    android:textColor="@color/pill_content"
+                    android:textSize="@dimen/slide_desc" />
+
+                <ImageView
+                    android:src="@drawable/meal_with"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/desc_padding"
+                    android:onClick="viewWithMeal"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="15dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
     </LinearLayout>
+
+</LinearLayout>
+
+
 </RelativeLayout>
