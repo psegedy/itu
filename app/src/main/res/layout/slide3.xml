@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="@dimen/img_width_height"
             android:layout_height="@dimen/img_width_height"
-            android:src="@drawable/pill6"
+            android:src="@drawable/pill12"
             android:layout_marginRight="20dp"/>
 
         <LinearLayout

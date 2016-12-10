@@ -7,6 +7,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Build;
 import android.os.SystemClock;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-//		// Making notification bar transparent but something is missing not transparent
+		// Making notification bar transparent but something is missing not transparent
 //		if (Build.VERSION.SDK_INT >= 21) {
 //			getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
 //		}
@@ -50,14 +51,14 @@ public class MainActivity extends AppCompatActivity {
 
 		btnMorning.setOnClickListener(new View.OnClickListener() {
 			@Override public void onClick(View view) {
-				notificationManager.notify(0, getNotificaiton());
+				notificationManager.notify(0, getNotification());
 				viewPillsMorning(view);
 			}
 		});
 
 		btnNoon.setOnClickListener(new View.OnClickListener() {
 			@Override public void onClick(View view) {
-				scheduleNotification(getNotificaiton(), 10000);
+				scheduleNotification(getNotification(), 10000);
 				Toast.makeText(MainActivity.this, "Notifikacia bude zobrazena o 10 sekund", Toast.LENGTH_SHORT).show();
 				viewPillsNoon(view);
 			}
@@ -95,25 +96,16 @@ public class MainActivity extends AppCompatActivity {
 
 	}
 
-
-	private Notification getNotificaiton() {
+	private Notification getNotification() {
 		Notification notifcation = new Notification.Builder(this)
-				.setContentTitle("Moja notifikacia")
-				.setContentText("Podarilo sa")
+				.setContentTitle("Pripomienkovač")
+				.setContentText("Zoberte vaše lieky!")
 				.setAutoCancel(true)
 				.setSmallIcon(R.drawable.pill_app_icon)
-				.setContentIntent(getNotificationIntent())
+				.setContentIntent(this.getNotificationIntent())
 				.build();
 
 		return notifcation;
-	}
-
-	private PendingIntent getNotificationIntent() {
-		TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-		stackBuilder.addParentStack(MainActivity.class);
-		stackBuilder.addNextIntent(new Intent(this, MainActivity.class));
-
-		return stackBuilder.getPendingIntent(9, PendingIntent.FLAG_UPDATE_CURRENT);
 	}
 
 	private void scheduleNotification(Notification notification, int delay) {
@@ -128,12 +120,13 @@ public class MainActivity extends AppCompatActivity {
 		alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
 	}
 
-	private Notification getNotification(String content) {
-		Notification.Builder builder = new Notification.Builder(this);
-		builder.setContentTitle("Scheduled Notification");
-		builder.setContentText(content);
-		builder.setSmallIcon(R.drawable.pill_app_icon);
-		return builder.build();
+	private PendingIntent getNotificationIntent() {
+		//TakePillsActivity take = new TakePillsActivity();
+		TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+		stackBuilder.addParentStack(MainActivity.class);
+		stackBuilder.addNextIntent(new Intent(this, MainActivity.class));
+
+		return stackBuilder.getPendingIntent(9, PendingIntent.FLAG_UPDATE_CURRENT);
 	}
 
 	public void viewPillsMorning(View view){

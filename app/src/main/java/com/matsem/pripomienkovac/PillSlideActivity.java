@@ -196,14 +196,16 @@ public class PillSlideActivity extends AppCompatActivity {
     }
 
     public void viewBeforeMeal(View view){
-        Toast.makeText(PillSlideActivity.this, "Tento liek požívajte pred jedlom.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(PillSlideActivity.this, "Tento liek požívajte pred jedlom.", Toast.LENGTH_LONG).show();
     }
 
     public void viewWithMeal(View view){
-        Toast.makeText(PillSlideActivity.this, "Tento liek požívajte s jedlom.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(PillSlideActivity.this, "Tento liek požívajte s jedlom.", Toast.LENGTH_LONG).show();
     }
 
     public void viewAfterMeal(View view){
-        Toast.makeText(PillSlideActivity.this, "Tento liek požívajte po jedle.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(PillSlideActivity.this, "Tento liek požívajte po jedle.", Toast.LENGTH_LONG).show();
     }
+
+
 }

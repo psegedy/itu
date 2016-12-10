@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="@dimen/img_width_height"
             android:layout_height="@dimen/img_width_height"
-            android:src="@drawable/pill4"
+            android:src="@drawable/pill9"
             android:layout_marginRight="20dp"/>
 
         <LinearLayout
@@ -57,9 +57,10 @@
                 android:layout_width="wrap_content"
                 android:paddingLeft="@dimen/desc_padding"
                 android:layout_height="wrap_content"
-                android:onClick="viewAfterMeal"/>
+                android:onClick="viewAfterMeal" />
 
         </LinearLayout>
 
     </LinearLayout>
+
 </RelativeLayout>

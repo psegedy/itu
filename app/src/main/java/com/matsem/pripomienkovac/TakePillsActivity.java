@@ -1,6 +1,9 @@
 package com.matsem.pripomienkovac;
 
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.os.Build;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -52,6 +55,35 @@ public class TakePillsActivity extends AppCompatActivity {
                 take1_all.setBackgroundColor(0x000000);
             }
         });
+
+        take2.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                take1_all.setAlpha((float) 0.1);
+                take1_all.setBackgroundColor(0x000000);
+            }
+        });
+
+        take3.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                take1_all.setAlpha((float) 0.1);
+                take1_all.setBackgroundColor(0x000000);
+            }
+        });
+
+        take4.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                take1_all.setAlpha((float) 0.1);
+                take1_all.setBackgroundColor(0x000000);
+            }
+        });
+    }
+
+    public PendingIntent getNotificationIntent() {
+        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+        stackBuilder.addParentStack(MainActivity.class);
+        stackBuilder.addNextIntent(new Intent(this, MainActivity.class));
+
+        return stackBuilder.getPendingIntent(9, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
 }

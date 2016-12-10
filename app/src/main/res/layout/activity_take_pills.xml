@@ -61,7 +61,8 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/meal_after" />
+                        android:src="@drawable/meal_after"
+                        android:onClick="viewAfterMeal"/>
                 </LinearLayout>
 
                 <ImageView
@@ -98,7 +99,7 @@
                         android:layout_weight="10"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:src="@drawable/pill2" />
+                        android:src="@drawable/pill14" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -161,7 +162,7 @@
                         android:layout_weight="10"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:src="@drawable/pill6" />
+                        android:src="@drawable/pill10" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -187,7 +188,8 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/meal_before" />
+                        android:src="@drawable/meal_before"
+                        android:onClick="viewBeforeMeal"/>
                 </LinearLayout>
 
                 <ImageView
@@ -225,7 +227,7 @@
                         android:layout_weight="10"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:src="@drawable/pill4" />
+                        android:src="@drawable/pill12" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -251,7 +253,8 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/meal_with" />
+                        android:src="@drawable/meal_with"
+                        android:onClick="viewWithMeal"/>
                 </LinearLayout>
 
                 <ImageView
