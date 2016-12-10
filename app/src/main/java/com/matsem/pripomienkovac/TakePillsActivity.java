@@ -1,6 +1,7 @@
 package com.matsem.pripomienkovac;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.v7.app.AlertDialog;
@@ -32,6 +33,11 @@ public class TakePillsActivity extends AppCompatActivity {
     AlertDialog.Builder dialog;
     AlertDialog diag;
     Button btnOk;
+    int taken;
+    private int take1_count;
+    private int take2_count;
+    private int take3_count;
+    private int take4_count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +53,6 @@ public class TakePillsActivity extends AppCompatActivity {
         // making notification bar transparent
         changeStatusBarColor();
 
-//        dialog = new Dialog(this);
-        AlertDialog.Builder builder;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             dialog = new AlertDialog.Builder(this, android.R.style.Theme_Material_Light_Dialog_Alert);
         } else {
@@ -67,11 +71,17 @@ public class TakePillsActivity extends AppCompatActivity {
         take4_all = (LinearLayout) findViewById(R.id.take4_all);
         take4_cam = (ImageView) findViewById(R.id.take4_cam);
         btnOk = (Button) findViewById(R.id.btn_ok);
+        taken = 0;
+        take1_count = 0;
+        take2_count = 0;
+        take3_count = 0;
+        take4_count = 0;
 
         take1.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
                 take1_all.setAlpha((float) 0.1);
                 take1_all.setBackgroundColor(0x000000);
+                clicked(take1);
             }
         });
 
@@ -79,6 +89,7 @@ public class TakePillsActivity extends AppCompatActivity {
             @Override public void onClick(View view) {
                 take2_all.setAlpha((float) 0.1);
                 take2_all.setBackgroundColor(0x000000);
+                clicked(take2);
             }
         });
 
@@ -86,6 +97,7 @@ public class TakePillsActivity extends AppCompatActivity {
             @Override public void onClick(View view) {
                 take3_all.setAlpha((float) 0.1);
                 take3_all.setBackgroundColor(0x000000);
+                clicked(take3);
             }
         });
 
@@ -93,6 +105,7 @@ public class TakePillsActivity extends AppCompatActivity {
             @Override public void onClick(View view) {
                 take4_all.setAlpha((float) 0.1);
                 take4_all.setBackgroundColor(0x000000);
+                clicked(take4);
             }
         });
 
@@ -155,6 +168,28 @@ public class TakePillsActivity extends AppCompatActivity {
         diag = dialog.show();
         ImageView photo = (ImageView) diag.findViewById(R.id.photo);
         photo.setImageResource(image);
+    }
+
+    public void clicked(LinearLayout take) {
+        if (take == take1 && take1_count < 1) {
+            taken++;
+            take1_count++;
+        } else if (take == take2 && take2_count < 1) {
+            taken++;
+            take2_count++;
+        } else if (take == take3 && take3_count < 1) {
+            taken++;
+            take3_count++;
+        } else if (take == take4 && take4_count < 1) {
+            taken++;
+            take4_count++;
+        }
+
+        if (taken == 4) {
+            Toast.makeText(TakePillsActivity.this, "Užili ste všetky lieky! Len tak ďalej", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
     }
 
 }
