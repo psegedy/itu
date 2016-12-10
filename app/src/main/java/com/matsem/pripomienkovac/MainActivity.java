@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v4.app.TaskStackBuilder;
@@ -18,17 +19,28 @@ public class MainActivity extends AppCompatActivity {
 
 	FrameLayout btn1;
 	FrameLayout btn2;
+	FrameLayout btn3;
+	FrameLayout btn4;
 
 	NotificationManager notificationManager;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+
 		super.onCreate(savedInstanceState);
+//		// Making notification bar transparent but something is missing not transparent
+//		if (Build.VERSION.SDK_INT >= 21) {
+//			getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+//		}
+
 		setContentView(R.layout.activity_main);
 		notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
+
 		btn1 = (FrameLayout) findViewById(R.id.btn_main_1);
 		btn2 = (FrameLayout) findViewById(R.id.btn_main_2);
+		btn3 = (FrameLayout) findViewById(R.id.btn_main_3);
+		btn4 = (FrameLayout) findViewById(R.id.btn_main_4);
 
 		btn1.setOnClickListener(new View.OnClickListener() {
 			@Override public void onClick(View view) {
@@ -42,15 +54,16 @@ public class MainActivity extends AppCompatActivity {
 				Toast.makeText(MainActivity.this, "Notifikacia bude zobrazena o 10 sekund", Toast.LENGTH_SHORT).show();
 			}
 		});
+
 	}
 
 
 	private Notification getNotificaiton() {
 		Notification notifcation = new Notification.Builder(this)
 				.setContentTitle("Moja notifikacia")
-				.setContentText("Pojeb sa")
+				.setContentText("Podarilo sa")
 				.setAutoCancel(true)
-				.setSmallIcon(R.mipmap.ic_launcher)
+				.setSmallIcon(R.drawable.ic_pill_icon)
 				.setContentIntent(getNotificationIntent())
 				.build();
 
@@ -81,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 		Notification.Builder builder = new Notification.Builder(this);
 		builder.setContentTitle("Scheduled Notification");
 		builder.setContentText(content);
-		builder.setSmallIcon(R.mipmap.ic_launcher);
+		builder.setSmallIcon(R.drawable.ic_pill_icon);
 		return builder.build();
 	}
 

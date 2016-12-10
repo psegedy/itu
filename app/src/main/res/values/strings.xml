@@ -1,7 +1,15 @@
 <resources>
     <string name="app_name">Pripomienkovac</string>
-    <string name="button_one_title">Make notification</string>
-    <string name="button_two_title">Schedule notification</string>
+
+    <string name="btn_morning">Ráno</string>
+    <string name="btn_noon">Obed</string>
+    <string name="btn_afternoon">Večer</string>
+    <string name="btn_night">V noci</string>
+
+    <string name="btn_podium">Rebríček</string>
+    <string name="btn_games">Hry</string>
+    <string name="btn_church">Bohoslužby</string>
+
 
     <string name="next">&gt;</string>
     <string name="skip">&lt;</string>

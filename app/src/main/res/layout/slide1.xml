@@ -14,7 +14,8 @@
         <ImageView
             android:layout_width="@dimen/img_width_height"
             android:layout_height="@dimen/img_width_height"
-            android:src="@drawable/pill" />
+            android:src="@drawable/pill4"
+            android:layout_marginRight="20dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,16 +52,11 @@
                 android:textColor="@color/pill_content"
                 android:textSize="@dimen/slide_desc" />
 
-            <TextView
+            <ImageView
+                android:src="@drawable/meal_after"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:paddingLeft="@dimen/desc_padding"
-                android:paddingRight="@dimen/desc_padding"
-                android:text="@string/slide_1_usage"
-                android:textAlignment="center"
-                android:textColor="@color/pill_content"
-                android:textSize="@dimen/slide_desc" />
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
