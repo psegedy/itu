@@ -90,7 +90,7 @@ public class TakePillsActivity extends AppCompatActivity {
 
         take1_cam.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                showPhoto(dialog, R.drawable.pill, "Žiadna fotografia");
+                showPhoto(dialog, R.drawable.no_pill, "Žiadna fotografia");
             }
         });
 
@@ -102,7 +102,7 @@ public class TakePillsActivity extends AppCompatActivity {
 
         take3_cam.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                showPhoto(dialog, R.drawable.pill, "Žiadna fotografia");
+                showPhoto(dialog, R.drawable.no_pill, "Žiadna fotografia");
             }
         });
 
