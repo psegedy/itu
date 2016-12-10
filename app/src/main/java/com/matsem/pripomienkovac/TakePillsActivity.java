@@ -3,6 +3,7 @@ package com.matsem.pripomienkovac;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.os.Build;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,7 +29,8 @@ public class TakePillsActivity extends AppCompatActivity {
     LinearLayout take4;
     LinearLayout take4_all;
     ImageView take4_cam;
-    Dialog dialog;
+    AlertDialog.Builder dialog;
+    AlertDialog diag;
     Button btnOk;
 
     @Override
@@ -45,7 +47,13 @@ public class TakePillsActivity extends AppCompatActivity {
         // making notification bar transparent
         changeStatusBarColor();
 
-        dialog = new Dialog(this);
+//        dialog = new Dialog(this);
+        AlertDialog.Builder builder;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            dialog = new AlertDialog.Builder(this, android.R.style.Theme_Material_Light_Dialog_Alert);
+        } else {
+            dialog = new AlertDialog.Builder(this);
+        }
         take1 = (LinearLayout) findViewById(R.id.take1);
         take1_all = (LinearLayout) findViewById(R.id.take1_all);
         take1_cam = (ImageView) findViewById(R.id.take1_cam);
@@ -58,7 +66,7 @@ public class TakePillsActivity extends AppCompatActivity {
         take4 = (LinearLayout) findViewById(R.id.take4);
         take4_all = (LinearLayout) findViewById(R.id.take4_all);
         take4_cam = (ImageView) findViewById(R.id.take4_cam);
-        btnOk = (Button) dialog.findViewById(R.id.btn_ok);
+        btnOk = (Button) findViewById(R.id.btn_ok);
 
         take1.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
@@ -137,15 +145,16 @@ public class TakePillsActivity extends AppCompatActivity {
     }
 
     public void hideDialog(View view) {
-        dialog.hide();
+        diag.dismiss();
     }
 
-    public void showPhoto(Dialog dialog, int image, String name) {
-        dialog.setContentView(R.layout.show_photo);
-        dialog.setTitle(name);
-        ImageView photo = (ImageView) dialog.findViewById(R.id.photo);
+    public void showPhoto(AlertDialog.Builder dialog, int image, String name) {
+        dialog.setView(R.layout.show_photo)
+                .setTitle(name)
+                .create();
+        diag = dialog.show();
+        ImageView photo = (ImageView) diag.findViewById(R.id.photo);
         photo.setImageResource(image);
-        dialog.show();
     }
 
 }
