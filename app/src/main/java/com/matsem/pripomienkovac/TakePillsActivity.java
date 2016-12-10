@@ -1,0 +1,57 @@
+package com.matsem.pripomienkovac;
+
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+public class TakePillsActivity extends AppCompatActivity {
+
+    LinearLayout take1;
+    LinearLayout take1_all;
+    ImageView take1_cam;
+    LinearLayout take2;
+    LinearLayout take2_all;
+    ImageView take2_cam;
+    LinearLayout take3;
+    LinearLayout take3_all;
+    ImageView take3_cam;
+    LinearLayout take4;
+    LinearLayout take4_all;
+    ImageView take4_cam;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // Making notification bar transparent
+        if (Build.VERSION.SDK_INT >= 21) {
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        }
+
+        setContentView(R.layout.activity_take_pills);
+
+        take1 = (LinearLayout) findViewById(R.id.take1);
+        take1_all = (LinearLayout) findViewById(R.id.take1_all);
+        take1_cam = (ImageView) findViewById(R.id.take1_cam);
+        take2 = (LinearLayout) findViewById(R.id.take2);
+        take2_all = (LinearLayout) findViewById(R.id.take2_all);
+        take2_cam = (ImageView) findViewById(R.id.take2_cam);
+        take3 = (LinearLayout) findViewById(R.id.take3);
+        take3_all = (LinearLayout) findViewById(R.id.take3_all);
+        take3_cam = (ImageView) findViewById(R.id.take3_cam);
+        take4 = (LinearLayout) findViewById(R.id.take4);
+        take4_all = (LinearLayout) findViewById(R.id.take4_all);
+        take4_cam = (ImageView) findViewById(R.id.take4_cam);
+
+        take1.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                take1_all.setAlpha((float) 0.1);
+                take1_all.setBackgroundColor(0x000000);
+            }
+        });
+    }
+
+}
