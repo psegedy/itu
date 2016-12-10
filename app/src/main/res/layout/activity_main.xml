@@ -9,7 +9,7 @@
 	android:paddingRight="@dimen/activity_horizontal_margin"
 	android:paddingTop="16dp"
 	tools:context="com.matsem.pripomienkovac.MainActivity">
-
+	<!--Zaciatok hlavnej obrazovky-->
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
@@ -17,12 +17,14 @@
 		android:layout_alignParentTop="true"
 		android:layout_alignParentStart="true">
 
+		<!--Zaciatok hlavneho menu-->
 		<LinearLayout
 			android:layout_width="0dp"
 			android:layout_weight="8"
 			android:layout_height="match_parent"
 			android:orientation="vertical">
 
+			<!--Zaciatok prveho riadku hlavneho menu 2 Frame layouts-->
 			<LinearLayout
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
@@ -40,19 +42,123 @@
 
 					<LinearLayout
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content">
+						android:layout_height="match_parent"
+						android:orientation="vertical">
 
-						<ImageView
-							android:layout_width="wrap_content"
+						<LinearLayout
+							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:layout_marginRight="10dp"
-							android:src="@drawable/morning"/>
-						<TextView
+							android:orientation="horizontal">
+
+							<ImageView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="10dp"
+								android:src="@drawable/morning"/>
+							<TextView
+								android:layout_width="wrap_content"
+								android:textColor="@color/white"
+								android:textSize="30dp"
+								android:layout_height="wrap_content"
+								android:text="@string/btn_morning"/>
+
+						</LinearLayout>
+						<LinearLayout
 							android:layout_width="wrap_content"
-							android:textColor="@color/white"
-							android:textSize="30dp"
-							android:layout_height="wrap_content"
-							android:text="@string/btn_morning"/>
+							android:layout_height="match_parent"
+							android:orientation="vertical">
+
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/meal_before"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill1"/>
+
+
+							</LinearLayout>
+							<View
+								android:layout_width="match_parent"
+								android:layout_height="1dp"
+								android:alpha=".5"
+								android:background="@android:color/white" />
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/meal_with"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill12"/>
+
+							</LinearLayout>
+							<View
+								android:layout_width="match_parent"
+								android:layout_height="1dp"
+								android:alpha=".5"
+								android:background="@android:color/white" />
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content">
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/meal_after"/>
+
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/no_pill"
+									android:visibility="invisible"/>
+
+
+							</LinearLayout>
+							<View
+								android:layout_width="match_parent"
+								android:layout_height="1dp"
+								android:alpha=".5"
+								android:background="@android:color/white" />
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content">
+								<!--to center-->
+								<ImageView
+									android:layout_width="0dp"
+									android:layout_height="0dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/no_pill"/>
+
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill3"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill4"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill14"/>
+
+							</LinearLayout>
+						</LinearLayout>
 
 					</LinearLayout>
 				</FrameLayout>
@@ -68,23 +174,121 @@
 
 					<LinearLayout
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content">
+						android:layout_height="match_parent"
+						android:orientation="vertical">
 
-						<ImageView
-							android:layout_width="wrap_content"
-							android:layout_marginRight="10dp"
+						<LinearLayout
+							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:src="@drawable/noon"/>
-						<TextView
-							android:layout_width="wrap_content"
-							android:textColor="@color/white"
-							android:textSize="30dp"
-							android:layout_height="wrap_content"
-							android:text="@string/btn_noon"/>
+							android:orientation="horizontal">
 
+							<ImageView
+								android:layout_width="wrap_content"
+								android:layout_marginRight="10dp"
+								android:layout_height="wrap_content"
+								android:src="@drawable/noon"/>
+							<TextView
+								android:layout_width="wrap_content"
+								android:textColor="@color/white"
+								android:textSize="30dp"
+								android:layout_height="wrap_content"
+								android:text="@string/btn_noon"/>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="match_parent"
+							android:orientation="vertical">
+
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/meal_before"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/no_pill"
+									android:visibility="invisible"/>
+
+
+							</LinearLayout>
+							<View
+								android:layout_width="match_parent"
+								android:layout_height="1dp"
+								android:alpha=".5"
+								android:background="@android:color/white" />
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/meal_with"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill5"/>
+
+							</LinearLayout>
+							<View
+								android:layout_width="match_parent"
+								android:layout_height="1dp"
+								android:alpha=".5"
+								android:background="@android:color/white" />
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content">
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/meal_after"/>
+
+
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill8"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill13"/>
+
+							</LinearLayout>
+							<View
+								android:layout_width="match_parent"
+								android:layout_height="1dp"
+								android:alpha=".5"
+								android:background="@android:color/white" />
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content">
+								<!--to center-->
+								<ImageView
+									android:layout_width="0dp"
+									android:layout_height="0dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/no_pill"/>
+
+
+
+							</LinearLayout>
+						</LinearLayout>
 					</LinearLayout>
+
 				</FrameLayout>
 			</LinearLayout>
+
+			<!--Zaciatok druheho riadku hlavneho menu 2 Frame layouts-->
 			<LinearLayout
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
@@ -99,23 +303,125 @@
 					android:layout_height="match_parent"
 					android:background="@color/bg_screen3"
 					android:layout_margin="5dp">
-
 					<LinearLayout
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content">
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:orientation="vertical">
 
-						<ImageView
+						<LinearLayout
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:layout_marginRight="10dp"
-							android:src="@drawable/afternoon"/>
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:textSize="30dp"
-							android:textColor="@color/white"
-							android:text="@string/btn_afternoon"/>
+							android:orientation="horizontal">
 
+							<ImageView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="10dp"
+								android:src="@drawable/afternoon"/>
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textSize="30dp"
+								android:textColor="@color/white"
+								android:text="@string/btn_afternoon"/>
+
+						</LinearLayout>
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="match_parent"
+							android:orientation="vertical">
+
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/meal_before"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill1"/>
+
+							</LinearLayout>
+							<View
+								android:layout_width="match_parent"
+								android:layout_height="1dp"
+								android:alpha=".5"
+								android:background="@android:color/white" />
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/meal_with"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill6"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill7"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill12"/>
+
+
+							</LinearLayout>
+							<View
+								android:layout_width="match_parent"
+								android:layout_height="1dp"
+								android:alpha=".5"
+								android:background="@android:color/white" />
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content">
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/meal_after"/>
+
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill11"/>
+
+
+							</LinearLayout>
+							<View
+								android:layout_width="match_parent"
+								android:layout_height="1dp"
+								android:alpha=".5"
+								android:background="@android:color/white" />
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content">
+								<!--to center-->
+								<ImageView
+									android:layout_width="0dp"
+									android:layout_height="0dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/no_pill"/>
+
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill2"/>
+
+
+							</LinearLayout>
+						</LinearLayout>
 					</LinearLayout>
 				</FrameLayout>
 
@@ -127,27 +433,127 @@
 					android:layout_height="match_parent"
 					android:background="@color/bg_screen4"
 					android:layout_margin="5dp">
-
 					<LinearLayout
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content">
+						android:layout_height="match_parent"
+						android:orientation="vertical">
 
-						<ImageView
-							android:layout_width="wrap_content"
+						<LinearLayout
+							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:layout_marginRight="10dp"
-							android:src="@drawable/night"/>
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:textSize="30dp"
-							android:textColor="@color/white"
-							android:text="@string/btn_night"/>
+							android:orientation="horizontal">
 
+							<ImageView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="10dp"
+								android:src="@drawable/night"/>
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textSize="30dp"
+								android:textColor="@color/white"
+								android:text="@string/btn_night"/>
+
+						</LinearLayout>
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="match_parent"
+							android:orientation="vertical">
+
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/meal_before"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/no_pill"
+									android:visibility="invisible"/>
+
+							</LinearLayout>
+							<View
+								android:layout_width="match_parent"
+								android:layout_height="1dp"
+								android:alpha=".5"
+								android:background="@android:color/white" />
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/meal_with"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/no_pill"
+									android:visibility="invisible"/>
+
+							</LinearLayout>
+							<View
+								android:layout_width="match_parent"
+								android:layout_height="1dp"
+								android:alpha=".5"
+								android:background="@android:color/white" />
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content">
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/meal_after"/>
+
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/no_pill"
+									android:visibility="invisible"/>
+
+							</LinearLayout>
+							<View
+								android:layout_width="match_parent"
+								android:layout_height="1dp"
+								android:alpha=".5"
+								android:background="@android:color/white" />
+							<LinearLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content">
+								<!--to center-->
+								<ImageView
+									android:layout_width="0dp"
+									android:layout_height="0dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/no_pill"/>
+
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill9"/>
+								<ImageView
+									android:layout_width="10dp"
+									android:layout_height="10dp"
+									android:layout_margin="5dp"
+									android:src="@drawable/pill10"/>
+
+							</LinearLayout>
+						</LinearLayout>
 					</LinearLayout>
 				</FrameLayout>
 			</LinearLayout>
+
 		</LinearLayout>
+		<!--Koniec hlavneho menu-->
+		<!--Zaciatok praveho menu-->
 		<LinearLayout
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
@@ -196,5 +602,7 @@
 
 			</FrameLayout>
 		</LinearLayout>
+		<!--Koniec praveho menu-->
 	</LinearLayout>
+	<!--Koniec hlavnej obrazovky-->
 </RelativeLayout>
