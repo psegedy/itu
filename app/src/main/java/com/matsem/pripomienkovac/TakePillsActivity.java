@@ -1,12 +1,15 @@
 package com.matsem.pripomienkovac;
 
-import android.app.PendingIntent;
-import android.content.Intent;
+import android.app.Dialog;
+import android.graphics.Color;
 import android.os.Build;
-import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -25,6 +28,8 @@ public class TakePillsActivity extends AppCompatActivity {
     LinearLayout take4;
     LinearLayout take4_all;
     ImageView take4_cam;
+    Dialog dialog;
+    Button btnOk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,10 @@ public class TakePillsActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_take_pills);
 
+        // making notification bar transparent
+        changeStatusBarColor();
+
+        dialog = new Dialog(this);
         take1 = (LinearLayout) findViewById(R.id.take1);
         take1_all = (LinearLayout) findViewById(R.id.take1_all);
         take1_cam = (ImageView) findViewById(R.id.take1_cam);
@@ -49,6 +58,7 @@ public class TakePillsActivity extends AppCompatActivity {
         take4 = (LinearLayout) findViewById(R.id.take4);
         take4_all = (LinearLayout) findViewById(R.id.take4_all);
         take4_cam = (ImageView) findViewById(R.id.take4_cam);
+        btnOk = (Button) dialog.findViewById(R.id.btn_ok);
 
         take1.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
@@ -77,26 +87,65 @@ public class TakePillsActivity extends AppCompatActivity {
                 take4_all.setBackgroundColor(0x000000);
             }
         });
+
+        take1_cam.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                showPhoto(dialog, R.drawable.pill, "Žiadna fotografia");
+            }
+        });
+
+        take2_cam.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                showPhoto(dialog, R.mipmap.paralen, "Paralen");
+            }
+        });
+
+        take3_cam.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                showPhoto(dialog, R.drawable.pill, "Žiadna fotografia");
+            }
+        });
+
+        take4_cam.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                showPhoto(dialog, R.mipmap.maltofer, "Maltofer Fol");
+            }
+        });
     }
 
-    public PendingIntent getNotificationIntent() {
-        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-        stackBuilder.addParentStack(MainActivity.class);
-        stackBuilder.addNextIntent(new Intent(this, MainActivity.class));
-
-        return stackBuilder.getPendingIntent(9, PendingIntent.FLAG_UPDATE_CURRENT);
+    /**
+     * Making notification bar transparent
+     */
+    private void changeStatusBarColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.TRANSPARENT);
+        }
     }
 
-    public void viewBeforeMeal(View view){
+    public void viewBeforeMeal(View view) {
         Toast.makeText(TakePillsActivity.this, "Tento liek požívajte pred jedlom.", Toast.LENGTH_LONG).show();
     }
 
-    public void viewWithMeal(View view){
+    public void viewWithMeal(View view) {
         Toast.makeText(TakePillsActivity.this, "Tento liek požívajte s jedlom.", Toast.LENGTH_LONG).show();
     }
 
-    public void viewAfterMeal(View view){
+    public void viewAfterMeal(View view) {
         Toast.makeText(TakePillsActivity.this, "Tento liek požívajte po jedle.", Toast.LENGTH_LONG).show();
+    }
+
+    public void hideDialog(View view) {
+        dialog.hide();
+    }
+
+    public void showPhoto(Dialog dialog, int image, String name) {
+        dialog.setContentView(R.layout.show_photo);
+        dialog.setTitle(name);
+        ImageView photo = (ImageView) dialog.findViewById(R.id.photo);
+        photo.setImageResource(image);
+        dialog.show();
     }
 
 }
