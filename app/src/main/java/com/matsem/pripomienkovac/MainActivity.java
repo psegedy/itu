@@ -123,8 +123,8 @@ public class MainActivity extends AppCompatActivity {
 	private PendingIntent getNotificationIntent() {
 		//TakePillsActivity take = new TakePillsActivity();
 		TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-		stackBuilder.addParentStack(MainActivity.class);
-		stackBuilder.addNextIntent(new Intent(this, MainActivity.class));
+		stackBuilder.addParentStack(TakePillsActivity.class);
+		stackBuilder.addNextIntent(new Intent(this, TakePillsActivity.class));
 
 		return stackBuilder.getPendingIntent(9, PendingIntent.FLAG_UPDATE_CURRENT);
 	}
