@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class TakePillsActivity extends AppCompatActivity {
 
@@ -58,22 +59,22 @@ public class TakePillsActivity extends AppCompatActivity {
 
         take2.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                take1_all.setAlpha((float) 0.1);
-                take1_all.setBackgroundColor(0x000000);
+                take2_all.setAlpha((float) 0.1);
+                take2_all.setBackgroundColor(0x000000);
             }
         });
 
         take3.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                take1_all.setAlpha((float) 0.1);
-                take1_all.setBackgroundColor(0x000000);
+                take3_all.setAlpha((float) 0.1);
+                take3_all.setBackgroundColor(0x000000);
             }
         });
 
         take4.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                take1_all.setAlpha((float) 0.1);
-                take1_all.setBackgroundColor(0x000000);
+                take4_all.setAlpha((float) 0.1);
+                take4_all.setBackgroundColor(0x000000);
             }
         });
     }
@@ -84,6 +85,18 @@ public class TakePillsActivity extends AppCompatActivity {
         stackBuilder.addNextIntent(new Intent(this, MainActivity.class));
 
         return stackBuilder.getPendingIntent(9, PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+
+    public void viewBeforeMeal(View view){
+        Toast.makeText(TakePillsActivity.this, "Tento liek požívajte pred jedlom.", Toast.LENGTH_LONG).show();
+    }
+
+    public void viewWithMeal(View view){
+        Toast.makeText(TakePillsActivity.this, "Tento liek požívajte s jedlom.", Toast.LENGTH_LONG).show();
+    }
+
+    public void viewAfterMeal(View view){
+        Toast.makeText(TakePillsActivity.this, "Tento liek požívajte po jedle.", Toast.LENGTH_LONG).show();
     }
 
 }
