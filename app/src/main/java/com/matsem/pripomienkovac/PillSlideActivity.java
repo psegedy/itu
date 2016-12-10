@@ -17,6 +17,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PillSlideActivity extends AppCompatActivity {
     private ViewPager viewPager;
@@ -192,5 +193,17 @@ public class PillSlideActivity extends AppCompatActivity {
             View view = (View) object;
             container.removeView(view);
         }
+    }
+
+    public void viewBeforeMeal(View view){
+        Toast.makeText(PillSlideActivity.this, "Tento liek požívajte pred jedlom.", Toast.LENGTH_SHORT).show();
+    }
+
+    public void viewWithMeal(View view){
+        Toast.makeText(PillSlideActivity.this, "Tento liek požívajte s jedlom.", Toast.LENGTH_SHORT).show();
+    }
+
+    public void viewAfterMeal(View view){
+        Toast.makeText(PillSlideActivity.this, "Tento liek požívajte po jedle.", Toast.LENGTH_SHORT).show();
     }
 }

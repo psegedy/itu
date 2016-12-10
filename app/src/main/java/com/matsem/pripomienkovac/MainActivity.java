@@ -6,7 +6,6 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v4.app.TaskStackBuilder;
@@ -17,10 +16,13 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-	FrameLayout btn1;
-	FrameLayout btn2;
-	FrameLayout btn3;
-	FrameLayout btn4;
+	FrameLayout btnMorning;
+	FrameLayout btnNoon;
+	FrameLayout btnAfternoon;
+	FrameLayout btnNight;
+	FrameLayout btnPodium;
+	FrameLayout btnGames;
+	FrameLayout btnChurch;
 
 	NotificationManager notificationManager;
 
@@ -37,21 +39,57 @@ public class MainActivity extends AppCompatActivity {
 		notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
 
-		btn1 = (FrameLayout) findViewById(R.id.btn_main_1);
-		btn2 = (FrameLayout) findViewById(R.id.btn_main_2);
-		btn3 = (FrameLayout) findViewById(R.id.btn_main_3);
-		btn4 = (FrameLayout) findViewById(R.id.btn_main_4);
+		btnMorning = (FrameLayout) findViewById(R.id.btn_main_1);
+		btnNoon = (FrameLayout) findViewById(R.id.btn_main_2);
+		btnAfternoon = (FrameLayout) findViewById(R.id.btn_main_3);
+		btnNight = (FrameLayout) findViewById(R.id.btn_main_4);
+		btnPodium = (FrameLayout) findViewById(R.id.podium);
+		btnGames = (FrameLayout) findViewById(R.id.games);
+		btnChurch = (FrameLayout) findViewById(R.id.church);
 
-		btn1.setOnClickListener(new View.OnClickListener() {
+
+		btnMorning.setOnClickListener(new View.OnClickListener() {
 			@Override public void onClick(View view) {
 				notificationManager.notify(0, getNotificaiton());
+				viewPillsMorning(view);
 			}
 		});
 
-		btn2.setOnClickListener(new View.OnClickListener() {
+		btnNoon.setOnClickListener(new View.OnClickListener() {
 			@Override public void onClick(View view) {
 				scheduleNotification(getNotificaiton(), 10000);
 				Toast.makeText(MainActivity.this, "Notifikacia bude zobrazena o 10 sekund", Toast.LENGTH_SHORT).show();
+				viewPillsNoon(view);
+			}
+		});
+
+		btnAfternoon.setOnClickListener(new View.OnClickListener() {
+			@Override public void onClick(View view) {
+				viewPillsAfternoon(view);
+			}
+		});
+
+		btnNight.setOnClickListener(new View.OnClickListener() {
+			@Override public void onClick(View view) {
+				viewPillsNight(view);
+			}
+		});
+
+		btnPodium.setOnClickListener(new View.OnClickListener() {
+			@Override public void onClick(View view) {
+				viewPodium(view);
+			}
+		});
+
+		btnGames.setOnClickListener(new View.OnClickListener() {
+			@Override public void onClick(View view) {
+				playGame(view);
+			}
+		});
+
+		btnChurch.setOnClickListener(new View.OnClickListener() {
+			@Override public void onClick(View view) {
+				viewChurchSchedule(view);
 			}
 		});
 
@@ -63,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 				.setContentTitle("Moja notifikacia")
 				.setContentText("Podarilo sa")
 				.setAutoCancel(true)
-				.setSmallIcon(R.drawable.ic_pill_icon)
+				.setSmallIcon(R.drawable.pill_app_icon)
 				.setContentIntent(getNotificationIntent())
 				.build();
 
@@ -94,12 +132,39 @@ public class MainActivity extends AppCompatActivity {
 		Notification.Builder builder = new Notification.Builder(this);
 		builder.setContentTitle("Scheduled Notification");
 		builder.setContentText(content);
-		builder.setSmallIcon(R.drawable.ic_pill_icon);
+		builder.setSmallIcon(R.drawable.pill_app_icon);
 		return builder.build();
 	}
 
-	public void viewPills(View view){
+	public void viewPillsMorning(View view){
 		Intent intent = new Intent(this, PillSlideActivity.class);
 		startActivity(intent);
+	}
+
+	public void viewPillsNoon(View view){
+		Intent intent = new Intent(this, PillSlideActivity.class);
+		startActivity(intent);
+	}
+
+	public void viewPillsAfternoon(View view){
+		Intent intent = new Intent(this, PillSlideActivity.class);
+		startActivity(intent);
+	}
+
+	public void viewPillsNight(View view){
+		Intent intent = new Intent(this, PillSlideActivity.class);
+		startActivity(intent);
+	}
+
+	public void viewPodium(View view){
+		Toast.makeText(MainActivity.this, "#TODO!!", Toast.LENGTH_SHORT).show();
+	}
+
+	public void playGame(View view){
+		Toast.makeText(MainActivity.this, "#TODO!!", Toast.LENGTH_SHORT).show();
+	}
+
+	public void viewChurchSchedule(View view){
+		Toast.makeText(MainActivity.this, "#TODO!!", Toast.LENGTH_SHORT).show();
 	}
 }

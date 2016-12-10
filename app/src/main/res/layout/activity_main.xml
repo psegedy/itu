@@ -38,12 +38,23 @@
 					android:background="@color/bg_screen1"
 					android:layout_margin="5dp">
 
-					<TextView
-						android:layout_width="wrap_content"
-						android:textColor="@color/white"
-						android:layout_height="wrap_content"
-						android:text="@string/btn_morning"/>
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
 
+						<ImageView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginRight="10dp"
+							android:src="@drawable/morning"/>
+						<TextView
+							android:layout_width="wrap_content"
+							android:textColor="@color/white"
+							android:textSize="30dp"
+							android:layout_height="wrap_content"
+							android:text="@string/btn_morning"/>
+
+					</LinearLayout>
 				</FrameLayout>
 
 				<FrameLayout
@@ -55,15 +66,25 @@
 					android:background="@color/bg_screen2"
 					android:layout_margin="5dp">
 
-					<TextView
-						android:layout_width="wrap_content"
-						android:textColor="@color/white"
-						android:layout_height="wrap_content"
-						android:text="@string/btn_noon"/>
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
 
+						<ImageView
+							android:layout_width="wrap_content"
+							android:layout_marginRight="10dp"
+							android:layout_height="wrap_content"
+							android:src="@drawable/noon"/>
+						<TextView
+							android:layout_width="wrap_content"
+							android:textColor="@color/white"
+							android:textSize="30dp"
+							android:layout_height="wrap_content"
+							android:text="@string/btn_noon"/>
+
+					</LinearLayout>
 				</FrameLayout>
 			</LinearLayout>
-
 			<LinearLayout
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
@@ -77,15 +98,25 @@
 					android:layout_width="match_parent"
 					android:layout_height="match_parent"
 					android:background="@color/bg_screen3"
-					android:onClick="viewPills"
 					android:layout_margin="5dp">
 
-					<TextView
+					<LinearLayout
 						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:textColor="@color/white"
-						android:text="@string/btn_afternoon"/>
+						android:layout_height="wrap_content">
 
+						<ImageView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginRight="10dp"
+							android:src="@drawable/afternoon"/>
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="30dp"
+							android:textColor="@color/white"
+							android:text="@string/btn_afternoon"/>
+
+					</LinearLayout>
 				</FrameLayout>
 
 				<FrameLayout
@@ -97,22 +128,31 @@
 					android:background="@color/bg_screen4"
 					android:layout_margin="5dp">
 
-					<TextView
-						android:layout_width="wrap_content"
-						android:textColor="@color/white"
-						android:layout_height="wrap_content"
-						android:text="@string/btn_night"/>
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
 
+						<ImageView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginRight="10dp"
+							android:src="@drawable/night"/>
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="30dp"
+							android:textColor="@color/white"
+							android:text="@string/btn_night"/>
+
+					</LinearLayout>
 				</FrameLayout>
 			</LinearLayout>
 		</LinearLayout>
-
 		<LinearLayout
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
 			android:layout_weight="1"
-			android:orientation="vertical"
-			>
+			android:orientation="vertical">
 
 			<FrameLayout
 				android:id="@+id/podium"
@@ -126,14 +166,15 @@
 					android:layout_height="match_parent"
 					android:src="@drawable/podium"/>
 
-
 			</FrameLayout>
+
 			<FrameLayout
 				android:id="@+id/games"
 				android:layout_weight="1"
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:layout_margin="5dp">
+
 				<ImageView
 					android:layout_width="match_parent"
 					android:layout_height="match_parent"
