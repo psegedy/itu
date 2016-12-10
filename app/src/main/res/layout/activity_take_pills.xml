@@ -35,7 +35,7 @@
                         android:layout_weight="10"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_pill_icon" />
+                        android:src="@drawable/pill5" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -61,7 +61,7 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/pill1" />
+                        android:src="@drawable/meal_after" />
                 </LinearLayout>
 
                 <ImageView
@@ -70,7 +70,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
-                    android:src="@drawable/camera_photo"
+                    android:src="@drawable/camera_no_photo"
                     android:id="@+id/take1_cam"/>
 
             </LinearLayout>
@@ -98,7 +98,7 @@
                         android:layout_weight="10"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:src="@drawable/pill1" />
+                        android:src="@drawable/pill2" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -123,8 +123,7 @@
                         android:layout_weight="10"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_marginStart="10dp"
-                        android:src="@drawable/pill1" />
+                        android:layout_marginStart="10dp" />
                 </LinearLayout>
 
 
@@ -162,7 +161,7 @@
                         android:layout_weight="10"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:src="@drawable/pill1" />
+                        android:src="@drawable/pill6" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -188,7 +187,7 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/pill1" />
+                        android:src="@drawable/meal_before" />
                 </LinearLayout>
 
                 <ImageView
@@ -197,7 +196,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
-                    android:src="@drawable/camera_photo"
+                    android:src="@drawable/camera_no_photo"
                     android:id="@+id/take3_cam"/>
 
             </LinearLayout>
@@ -226,7 +225,7 @@
                         android:layout_weight="10"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:src="@drawable/pill1" />
+                        android:src="@drawable/pill4" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -252,7 +251,7 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/pill1" />
+                        android:src="@drawable/meal_with" />
                 </LinearLayout>
 
                 <ImageView
