@@ -24,9 +24,6 @@
             android:name=".PillSlideActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".TakePillsActivity"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".PodiumActivity"
             android:screenOrientation="landscape" />
         <activity
@@ -40,6 +37,11 @@
             android:screenOrientation="landscape"/>
         <activity
             android:name=".PexesoActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".TakePillsActivity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".ChurchActivity"
             android:screenOrientation="landscape"/>
     </application>
 
