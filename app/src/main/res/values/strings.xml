@@ -10,6 +10,8 @@
     <string name="btn_games">Hry</string>
     <string name="btn_church">Bohoslužby</string>
 
+    <string name="church">Nejsvětější Trojice Brno - Královo Pole</string>
+
     <string name="melodies">MELÓDIE</string>
     <string name="hangman">OBESENEC</string>
     <string name="pexeso">P E X E S O</string>
