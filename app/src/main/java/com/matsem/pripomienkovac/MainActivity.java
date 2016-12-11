@@ -6,12 +6,15 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Build;
 import android.os.SystemClock;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 		// Making notification bar transparent but something is missing not transparent
 //		if (Build.VERSION.SDK_INT >= 21) {
 //			getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+//			changeStatusBarColor();
 //		}
 
 		setContentView(R.layout.activity_main);
@@ -96,6 +100,14 @@ public class MainActivity extends AppCompatActivity {
 
 	}
 
+	private void changeStatusBarColor() {
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+			Window window = getWindow();
+			window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+			window.setStatusBarColor(Color.TRANSPARENT);
+		}
+	}
+
 	private Notification getNotification() {
 		Notification notifcation = new Notification.Builder(this)
 				.setContentTitle("Pripomienkovač")
@@ -154,7 +166,8 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	public void playGame(View view){
-		Toast.makeText(MainActivity.this, "#TODO!!", Toast.LENGTH_SHORT).show();
+		Intent intent = new Intent(this, GamesActivity.class);
+		startActivity(intent);
 	}
 
 	public void viewChurchSchedule(View view){

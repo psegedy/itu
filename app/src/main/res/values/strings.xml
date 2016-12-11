@@ -10,6 +10,9 @@
     <string name="btn_games">Hry</string>
     <string name="btn_church">Bohoslužby</string>
 
+    <string name="melodies">MELÓDIE</string>
+    <string name="hangman">OBESENEC</string>
+    <string name="pexeso">P E X E S O</string>
 
     <string name="next">&gt;</string>
     <string name="skip">&lt;</string>
