@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,17 +31,10 @@
 
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_marginBottom="3dp"
-            android:layout_height="2dp"
-            android:alpha=".5"
-            android:background="@color/dot_light" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="270dp"
-            android:src="@mipmap/bohosluzby"/>
+                    <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/bohosluzby"/>
 
     </LinearLayout>
 
