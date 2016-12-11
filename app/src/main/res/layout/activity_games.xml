@@ -77,7 +77,7 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/no_pill"/>
+                                android:src="@drawable/icon_melodies"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:src="@drawable/no_pill"/>
+                            android:src="@drawable/icon_hangman"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

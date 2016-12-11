@@ -12,12 +12,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_pexeso"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="@string/pexeso"
-                android:textColor="@color/dot_light"
-                android:textSize="20dp"
+                android:textColor="@color/purple"
+                android:textSize="25dp"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"/>
 
         </LinearLayout>
@@ -31,7 +37,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/no_pill"/>
+            android:src="@mipmap/pexeso"/>
 
     </LinearLayout>
 
