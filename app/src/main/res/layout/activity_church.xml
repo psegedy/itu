@@ -30,11 +30,10 @@
                 android:text="@string/church"/>
 
         </LinearLayout>
-
-                    <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@mipmap/bohosluzby"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/bohosluzby"/>
 
     </LinearLayout>
 
