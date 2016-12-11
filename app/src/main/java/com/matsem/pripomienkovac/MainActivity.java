@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
 		btnGames.setOnClickListener(new View.OnClickListener() {
 			@Override public void onClick(View view) {
-				playGame(view);
+				playGames(view);
 			}
 		});
 
@@ -162,10 +162,11 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	public void viewPodium(View view){
-		Toast.makeText(MainActivity.this, "#TODO!!", Toast.LENGTH_SHORT).show();
+		Intent intent = new Intent(this, PodiumActivity.class);
+		startActivity(intent);
 	}
 
-	public void playGame(View view){
+	public void playGames(View view){
 		Intent intent = new Intent(this, GamesActivity.class);
 		startActivity(intent);
 	}

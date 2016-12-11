@@ -11,6 +11,8 @@
     <string name="btn_church">Bohoslužby</string>
 
     <string name="church">Nejsvětější Trojice Brno - Královo Pole</string>
+    <string name="games">Hry</string>
+    <string name="podium">Rebríček</string>
 
     <string name="melodies">MELÓDIE</string>
     <string name="hangman">OBESENEC</string>
@@ -19,6 +21,15 @@
     <string name="next">&gt;</string>
     <string name="skip">&lt;</string>
     <string name="start">GOT IT</string>
+
+    <string name="first">Jakub Novák</string>
+    <string name="second">Adam Kováč</string>
+    <string name="third">Eliška Balogová</string>
+    <string name="fourth">Andrej Varga</string>
+    <string name="fifth">Tomáš Polák</string>
+    <string name="sixth">Viktória Vargová (Vy)</string>
+    <string name="seventh">Tamara Poláková</string>
+
 
     <string name="slide_1_title">Ibalgin 400</string>
     <string name="slide_1_desc">Liek proti bolesti</string>

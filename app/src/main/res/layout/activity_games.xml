@@ -20,7 +20,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Hry"
+                android:text="@string/games"
                 android:textColor="@color/dot_light"
                 android:textSize="30dp"
                 android:layout_margin="10dp"/>
@@ -35,75 +35,94 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3">
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/pexeso"
-                        android:textColor="@color/purple"
-                        android:layout_margin="15dp"
-                        android:textSize="@dimen/slide_title"
-                        android:textStyle="bold"
-                        android:id="@+id/btn_pexeso"/>
-
+                        android:onClick="playPexeso">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/icon_pexeso"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pexeso"
+                                android:textColor="@color/purple"
+                                android:layout_margin="15dp"
+                                android:textSize="@dimen/slide_title"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </FrameLayout>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:alpha=".5"
                         android:background="@color/dot_light" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <FrameLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/melodies"
-                        android:textColor="@color/purple"
-                        android:layout_margin="15dp"
-                        android:textSize="@dimen/slide_title"
-                        android:textStyle="bold"
-                        android:id="@+id/btn_concentration"/>
-
+                        android:onClick="playMelodies">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/no_pill"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/melodies"
+                                android:textColor="@color/purple"
+                                android:layout_margin="15dp"
+                                android:textSize="@dimen/slide_title"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </FrameLayout>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:alpha=".5"
                         android:background="@color/dot_light" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/hangman"
-                        android:textColor="@color/purple"
-                        android:layout_margin="15dp"
-                        android:textSize="@dimen/slide_title"
-                        android:textStyle="bold"
-                        android:id="@+id/btn_hangman"/>
-                    <View
+                    <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:alpha=".5"
-                        android:background="@color/dot_light" />
-
+                        android:layout_height="wrap_content"
+                        android:onClick="playHangman">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/no_pill"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hangman"
+                            android:textColor="@color/purple"
+                            android:layout_margin="15dp"
+                            android:textSize="@dimen/slide_title"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </FrameLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:alpha=".5"
+                    android:background="@color/dot_light" />
                 </LinearLayout>
 
-            </RelativeLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
 
         </LinearLayout>
 
