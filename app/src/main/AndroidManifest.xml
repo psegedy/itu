@@ -33,9 +33,6 @@
             android:name=".GamesActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".ChurchActivity"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".HangmanActivity"
             android:screenOrientation="landscape"/>
         <activity
