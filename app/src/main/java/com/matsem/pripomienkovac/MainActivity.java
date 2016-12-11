@@ -158,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	public void viewChurchSchedule(View view){
-		Toast.makeText(MainActivity.this, "#TODO!!", Toast.LENGTH_SHORT).show();
+		Intent intent = new Intent(this, ChurchActivity.class);
+		startActivity(intent);
 	}
 }
