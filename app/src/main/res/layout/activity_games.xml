@@ -57,8 +57,7 @@
                                 android:text="@string/pexeso"
                                 android:textColor="@color/purple"
                                 android:layout_margin="15dp"
-                                android:textSize="@dimen/slide_title"
-                                android:textStyle="bold" />
+                                android:textSize="@dimen/slide_title" />
                         </LinearLayout>
                     </FrameLayout>
                     <View
@@ -84,8 +83,7 @@
                                 android:text="@string/melodies"
                                 android:textColor="@color/purple"
                                 android:layout_margin="15dp"
-                                android:textSize="@dimen/slide_title"
-                                android:textStyle="bold" />
+                                android:textSize="@dimen/slide_title" />
                         </LinearLayout>
                     </FrameLayout>
                     <View
@@ -111,8 +109,7 @@
                             android:text="@string/hangman"
                             android:textColor="@color/purple"
                             android:layout_margin="15dp"
-                            android:textSize="@dimen/slide_title"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/slide_title"/>
                     </LinearLayout>
                 </FrameLayout>
                 <View

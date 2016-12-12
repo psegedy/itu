@@ -47,7 +47,8 @@
 
 						<LinearLayout
 							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
+							android:layout_height="0dp"
+							android:layout_weight="1"
 							android:orientation="horizontal">
 
 							<ImageView
@@ -58,7 +59,7 @@
 							<TextView
 								android:layout_width="wrap_content"
 								android:textColor="@color/white"
-								android:textSize="30dp"
+								android:textSize="20dp"
 								android:layout_height="wrap_content"
 								android:text="@string/btn_morning"/>
 
@@ -77,11 +78,12 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:src="@drawable/meal_before"/>
+									android:src="@drawable/meal_before"
+									android:adjustViewBounds="true"/>
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill1"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
@@ -101,11 +103,12 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:src="@drawable/meal_with"/>
+									android:src="@drawable/meal_with"
+									android:adjustViewBounds="true"/>
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill12"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
@@ -123,7 +126,8 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:src="@drawable/meal_after"/>
+									android:src="@drawable/meal_after"
+									android:adjustViewBounds="true"/>
 
 
 
@@ -142,21 +146,21 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill3"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill4"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill14"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
@@ -183,8 +187,8 @@
 
 						<LinearLayout
 							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
 							android:orientation="horizontal"
+							android:layout_height="0dp"
 							android:layout_weight="1">
 
 							<ImageView
@@ -195,7 +199,7 @@
 							<TextView
 								android:layout_width="wrap_content"
 								android:textColor="@color/white"
-								android:textSize="30dp"
+								android:textSize="20dp"
 								android:layout_height="wrap_content"
 								android:text="@string/btn_noon"/>
 
@@ -203,7 +207,7 @@
 
 						<LinearLayout
 							android:layout_width="wrap_content"
-							android:layout_height="match_parent"
+							android:layout_height="0dp"
 							android:orientation="vertical"
 							android:layout_weight="4">
 
@@ -215,7 +219,8 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:src="@drawable/meal_before"/>
+									android:src="@drawable/meal_before"
+									android:adjustViewBounds="true"/>
 
 							</LinearLayout>
 							<View
@@ -231,11 +236,12 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:src="@drawable/meal_with"/>
+									android:src="@drawable/meal_with"
+									android:adjustViewBounds="true"/>
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill5"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
@@ -253,20 +259,21 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:src="@drawable/meal_after"/>
+									android:src="@drawable/meal_after"
+									android:adjustViewBounds="true"/>
 
 
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill7"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill13"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
@@ -312,7 +319,7 @@
 
 						<LinearLayout
 							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
+							android:layout_height="0dp"
 							android:orientation="horizontal"
 							android:layout_weight="1">
 
@@ -323,17 +330,17 @@
 								android:src="@drawable/afternoon"/>
 							<TextView
 								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:textSize="30dp"
+								android:layout_height="match_parent"
+								android:textSize="20dp"
 								android:textColor="@color/white"
 								android:text="@string/btn_afternoon"/>
 
 						</LinearLayout>
 						<LinearLayout
 							android:layout_width="wrap_content"
-							android:layout_height="match_parent"
+							android:layout_height="0dp"
 							android:orientation="vertical"
-							android:layout_weight="8">
+							android:layout_weight="4">
 
 							<LinearLayout
 								android:layout_width="wrap_content"
@@ -343,11 +350,12 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:src="@drawable/meal_before"/>
+									android:src="@drawable/meal_before"
+									android:adjustViewBounds="true"/>
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill1"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
@@ -366,25 +374,26 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:src="@drawable/meal_with" />
+									android:src="@drawable/meal_with"
+									android:adjustViewBounds="true"/>
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill6"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill8"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill12"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
@@ -403,12 +412,13 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:src="@drawable/meal_after"/>
+									android:src="@drawable/meal_after"
+									android:adjustViewBounds="true"/>
 
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill11"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
@@ -429,7 +439,7 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill2"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
@@ -455,7 +465,7 @@
 
 						<LinearLayout
 							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
+							android:layout_height="0dp"
 							android:layout_weight="1"
 							android:orientation="horizontal">
 
@@ -466,16 +476,16 @@
 								android:src="@drawable/night"/>
 							<TextView
 								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:textSize="30dp"
+								android:layout_height="match_parent"
+								android:textSize="20dp"
 								android:textColor="@color/white"
 								android:text="@string/btn_night"/>
 
 						</LinearLayout>
 						<LinearLayout
 							android:layout_width="wrap_content"
-							android:layout_weight="8"
-							android:layout_height="match_parent"
+							android:layout_weight="4"
+							android:layout_height="0dp"
 							android:orientation="vertical">
 
 							<LinearLayout
@@ -486,7 +496,8 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:src="@drawable/meal_before"/>
+									android:src="@drawable/meal_before"
+									android:adjustViewBounds="true"/>
 
 							</LinearLayout>
 							<View
@@ -502,7 +513,8 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:src="@drawable/meal_with"/>
+									android:src="@drawable/meal_with"
+									android:adjustViewBounds="true"/>
 
 							</LinearLayout>
 							<View
@@ -517,7 +529,8 @@
 								<ImageView
 									android:layout_width="wrap_content"
 									android:layout_height="match_parent"
-									android:src="@drawable/meal_after"/>
+									android:src="@drawable/meal_after"
+									android:adjustViewBounds="true"/>
 
 
 
@@ -535,14 +548,14 @@
 								<ImageView
 									android:layout_width="match_parent"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill9"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
 								<ImageView
 									android:layout_width="match_parent"
 									android:layout_height="match_parent"
-									android:layout_margin="1dp"
+									android:layout_margin="5dp"
 									android:src="@drawable/pill10"
 									android:layout_marginEnd="2dp"
 									android:adjustViewBounds="true"/>
