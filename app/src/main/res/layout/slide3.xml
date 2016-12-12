@@ -58,11 +58,7 @@ android:background="@color/bg_pill">
 
                 </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:alpha=".5"
-                    android:background="@color/pill_title" />
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -71,14 +67,9 @@ android:background="@color/bg_pill">
                     android:paddingLeft="@dimen/desc_padding"
                     android:paddingRight="@dimen/desc_padding"
                     android:text="@string/slide_3_desc"
-                    android:textAlignment="center"
                     android:textColor="@color/pill_content"
                     android:textSize="@dimen/slide_desc" />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:alpha=".5"
-                    android:background="@color/dot_light" />
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -87,14 +78,8 @@ android:background="@color/bg_pill">
                     android:paddingLeft="@dimen/desc_padding"
                     android:paddingRight="@dimen/desc_padding"
                     android:text="@string/slide_3_cont"
-                    android:textAlignment="center"
                     android:textColor="@color/pill_content"
                     android:textSize="@dimen/slide_desc" />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:alpha=".5"
-                    android:background="@color/dot_light" />
 
 
             </LinearLayout>
