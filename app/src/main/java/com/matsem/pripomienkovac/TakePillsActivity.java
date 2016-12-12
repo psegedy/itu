@@ -8,12 +8,14 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class TakePillsActivity extends AppCompatActivity {
@@ -146,15 +148,27 @@ public class TakePillsActivity extends AppCompatActivity {
     }
 
     public void viewBeforeMeal(View view) {
-        Toast.makeText(TakePillsActivity.this, "Tento liek požívajte pred jedlom.", Toast.LENGTH_LONG).show();
+        Toast toast = Toast.makeText(TakePillsActivity.this, "Požívajte pred jedlom.", Toast.LENGTH_LONG);
+        ViewGroup group = (ViewGroup) toast.getView();
+        TextView messageTextView = (TextView) group.getChildAt(0);
+        messageTextView.setTextSize(33);
+        toast.show();
     }
 
     public void viewWithMeal(View view) {
-        Toast.makeText(TakePillsActivity.this, "Tento liek požívajte s jedlom.", Toast.LENGTH_LONG).show();
+        Toast toast = Toast.makeText(TakePillsActivity.this, "Požívajte s jedlom.", Toast.LENGTH_LONG);
+        ViewGroup group = (ViewGroup) toast.getView();
+        TextView messageTextView = (TextView) group.getChildAt(0);
+        messageTextView.setTextSize(33);
+        toast.show();
     }
 
     public void viewAfterMeal(View view) {
-        Toast.makeText(TakePillsActivity.this, "Tento liek požívajte po jedle.", Toast.LENGTH_LONG).show();
+        Toast toast = Toast.makeText(TakePillsActivity.this, "Požívajte po jedle.", Toast.LENGTH_LONG);
+        ViewGroup group = (ViewGroup) toast.getView();
+        TextView messageTextView = (TextView) group.getChildAt(0);
+        messageTextView.setTextSize(33);
+        toast.show();
     }
 
     public void hideDialog(View view) {
@@ -186,9 +200,15 @@ public class TakePillsActivity extends AppCompatActivity {
         }
 
         if (taken == 4) {
-            Toast.makeText(TakePillsActivity.this, "Užili ste všetky lieky! Len tak ďalej", Toast.LENGTH_LONG).show();
+            Toast toast = Toast.makeText(TakePillsActivity.this, "Užili ste všetky lieky!\nLen tak ďalej!", Toast.LENGTH_LONG);
+            ViewGroup group = (ViewGroup) toast.getView();
+            TextView messageTextView = (TextView) group.getChildAt(0);
+            messageTextView.setTextSize(31);
+            toast.show();
             Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
+            finish();
         }
     }
 

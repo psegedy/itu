@@ -17,6 +17,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -197,15 +198,27 @@ public class PillSlideActivity extends AppCompatActivity {
     }
 
     public void viewBeforeMeal(View view){
-        Toast.makeText(PillSlideActivity.this, "Tento liek požívajte pred jedlom.", Toast.LENGTH_LONG).show();
+        Toast toast = Toast.makeText(PillSlideActivity.this, "Požívajte pred jedlom.", Toast.LENGTH_LONG);
+        ViewGroup group = (ViewGroup) toast.getView();
+        TextView messageTextView = (TextView) group.getChildAt(0);
+        messageTextView.setTextSize(33);
+        toast.show();
     }
 
     public void viewWithMeal(View view){
-        Toast.makeText(PillSlideActivity.this, "Tento liek požívajte s jedlom.", Toast.LENGTH_LONG).show();
+        Toast toast = Toast.makeText(PillSlideActivity.this, "Požívajte s jedlom.", Toast.LENGTH_LONG);
+        ViewGroup group = (ViewGroup) toast.getView();
+        TextView messageTextView = (TextView) group.getChildAt(0);
+        messageTextView.setTextSize(33);
+        toast.show();
     }
 
     public void viewAfterMeal(View view){
-        Toast.makeText(PillSlideActivity.this, "Tento liek požívajte po jedle.", Toast.LENGTH_LONG).show();
+        Toast toast = Toast.makeText(PillSlideActivity.this, "Požívajte po jedle.", Toast.LENGTH_LONG);
+        ViewGroup group = (ViewGroup) toast.getView();
+        TextView messageTextView = (TextView) group.getChildAt(0);
+        messageTextView.setTextSize(33);
+        toast.show();
     }
 
     public static final int getColor(Context context, int id) {

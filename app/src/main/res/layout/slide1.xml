@@ -9,16 +9,16 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
         <LinearLayout
-            android:layout_width="15dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="2">
 
         </LinearLayout>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="3">
+            android:layout_weight="24">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,25 +37,42 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/slide_1_title"
+                            android:textColor="@color/pill_title"
+                            android:textSize="@dimen/slide_title"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:alpha=".5"
+                        android:background="@color/pill_title" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/slide_1_title"
-                        android:textColor="@color/pill_title"
-                        android:textSize="@dimen/slide_title"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:paddingLeft="@dimen/desc_padding"
                         android:paddingRight="@dimen/desc_padding"
                         android:text="@string/slide_1_desc"
                         android:textAlignment="center"
                         android:textColor="@color/pill_content"
                         android:textSize="@dimen/slide_desc" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:alpha=".5"
+                        android:background="@color/dot_light" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -67,13 +84,13 @@
                         android:textAlignment="center"
                         android:textColor="@color/pill_content"
                         android:textSize="@dimen/slide_desc" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:alpha=".5"
+                        android:background="@color/dot_light" />
 
-                    <ImageView
-                        android:src="@drawable/meal_after"
-                        android:layout_width="wrap_content"
-                        android:paddingLeft="@dimen/desc_padding"
-                        android:layout_height="wrap_content"
-                        android:onClick="viewAfterMeal" />
+
 
                 </LinearLayout>
 
@@ -82,9 +99,9 @@
         </RelativeLayout>
 
         <LinearLayout
-            android:layout_width="15dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="2">
 
         </LinearLayout>
 
