@@ -28,22 +28,19 @@ public class MainActivity extends AppCompatActivity {
 	FrameLayout btnGames;
 	FrameLayout btnChurch;
 
+	;
+
+
 	NotificationManager notificationManager;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-		// Making notification bar transparent but something is missing not transparent
-//		if (Build.VERSION.SDK_INT >= 21) {
-//			getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-//
-//		}
 
 		setContentView(R.layout.activity_main);
 		notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-		//changeStatusBarColor();
 
 		btnMorning = (FrameLayout) findViewById(R.id.btn_main_1);
 		btnNoon = (FrameLayout) findViewById(R.id.btn_main_2);
@@ -52,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
 		btnPodium = (FrameLayout) findViewById(R.id.podium);
 		btnGames = (FrameLayout) findViewById(R.id.games);
 		btnChurch = (FrameLayout) findViewById(R.id.church);
-
 
 		btnMorning.setOnClickListener(new View.OnClickListener() {
 			@Override public void onClick(View view) {
@@ -101,23 +97,16 @@ public class MainActivity extends AppCompatActivity {
 
 	}
 
-	private void changeStatusBarColor() {
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-			Window window = getWindow();
-			window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-			window.setStatusBarColor(Color.TRANSPARENT);
-		}
-	}
-
 	private Notification getNotification() {
 		Notification notifcation = new Notification.Builder(this)
 				.setContentTitle("Pripomienkovač")
 				.setContentText("Zoberte vaše lieky!")
-				.setAutoCancel(true)
+				.setAutoCancel(false)
 				.setSmallIcon(R.drawable.pill_app_icon)
 				.setContentIntent(this.getNotificationIntent())
 				.build();
-
+		notifcation.defaults |= Notification.DEFAULT_VIBRATE;
+		notifcation.defaults |= Notification.DEFAULT_SOUND;
 		return notifcation;
 	}
 
@@ -134,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	public PendingIntent getNotificationIntent() {
-		//TakePillsActivity take = new TakePillsActivity();
 		TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
 		stackBuilder.addParentStack(TakePillsActivity.class);
 		stackBuilder.addNextIntent(new Intent(this, TakePillsActivity.class));
