@@ -6,15 +6,14 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
-import android.os.Build;
 import android.os.SystemClock;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -28,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
 	FrameLayout btnGames;
 	FrameLayout btnChurch;
 
-	;
+	private AlarmManager alarmMgr;
+	private PendingIntent alarmIntent;
 
 
 	NotificationManager notificationManager;
@@ -98,16 +98,22 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	private Notification getNotification() {
-		Notification notifcation = new Notification.Builder(this)
+
+		Uri alarmSound = RingtoneManager.getDefaultUri(R.raw.alarm);
+		NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
+				.setSmallIcon(R.drawable.pill_app_icon)
 				.setContentTitle("Pripomienkovač")
 				.setContentText("Zoberte vaše lieky!")
 				.setAutoCancel(false)
 				.setSmallIcon(R.drawable.pill_app_icon)
 				.setContentIntent(this.getNotificationIntent())
-				.build();
-		notifcation.defaults |= Notification.DEFAULT_VIBRATE;
-		notifcation.defaults |= Notification.DEFAULT_SOUND;
-		return notifcation;
+				.setDefaults(Notification.DEFAULT_VIBRATE)
+				.setSound(alarmSound);
+		Notification notification = builder.build();
+		notification.sound = Uri.parse("android.resource://"
+				+ this.getPackageName() + "/" + R.raw.alarm);
+
+		return notification;
 	}
 
 	private void scheduleNotification(Notification notification, int delay) {
