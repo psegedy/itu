@@ -6,9 +6,9 @@
     <string name="btn_afternoon">Večer</string>
     <string name="btn_night">V noci</string>
 
-    <string name="btn_podium">Rebríček</string>
-    <string name="btn_games">Hry</string>
-    <string name="btn_church">Bohoslužby</string>
+    <string name="before">Požívajte pred jedlom.</string>
+    <string name="with">Požívajte s jedlom.</string>
+    <string name="after">Požívajte po jedle.</string>
 
     <string name="church">Nejsvětější Trojice Brno - Královo Pole</string>
     <string name="games">Hry</string>
@@ -19,8 +19,7 @@
     <string name="pexeso">P E X E S O</string>
 
     <string name="next">&gt;</string>
-    <string name="skip">&lt;</string>
-    <string name="start">GOT IT</string>
+    <string name="back">&lt;</string>
 
     <string name="first">Jakub Novák</string>
     <string name="second">Adam Kováč</string>
@@ -30,19 +29,17 @@
     <string name="sixth">Viktória Vargová (Vy)</string>
     <string name="seventh">Tamara Poláková</string>
 
-
     <string name="slide_1_title">Ibalgin 400</string>
     <string name="slide_1_desc">Liek proti bolesti</string>
     <string name="slide_1_cont">ibuprofen 400 mg</string>
-    <string name="slide_1_usage">po jedle</string>
 
     <string name="slide_2_title">Essentiale Forte N</string>
     <string name="slide_2_desc">Rastlinný liek na ochorenie pečene</string>
     <string name="slide_2_cont">phospholipida sojae praeparata 300mg</string>
-    <string name="slide_2_usage">pred jedlom</string>
 
     <string name="slide_3_title">Maltofer Fol</string>
     <string name="slide_3_desc">Perorálna terapia železom</string>
     <string name="slide_3_cont">100mg železa, 0,35mg kyseliny listovej</string>
-    <string name="slide_3_usage">po jedle</string>
+
+    <string name="huray">"Užili ste všetky lieky!\nLen tak ďalej!"</string>
 </resources>

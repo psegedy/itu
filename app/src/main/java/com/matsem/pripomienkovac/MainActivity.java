@@ -6,7 +6,6 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -15,7 +14,6 @@ import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,10 +25,6 @@ public class MainActivity extends AppCompatActivity {
 	FrameLayout btnGames;
 	FrameLayout btnChurch;
 
-	private AlarmManager alarmMgr;
-	private PendingIntent alarmIntent;
-
-
 	NotificationManager notificationManager;
 
 	@Override
@@ -40,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
 		setContentView(R.layout.activity_main);
 		notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
 
 		btnMorning = (FrameLayout) findViewById(R.id.btn_main_1);
 		btnNoon = (FrameLayout) findViewById(R.id.btn_main_2);
@@ -52,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
 		btnMorning.setOnClickListener(new View.OnClickListener() {
 			@Override public void onClick(View view) {
-				notificationManager.notify(0, getNotification());
 				viewPillsMorning(view);
 			}
 		});
@@ -60,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 		btnNoon.setOnClickListener(new View.OnClickListener() {
 			@Override public void onClick(View view) {
 				scheduleNotification(getNotification(), 10000);
-				Toast.makeText(MainActivity.this, "Notifikacia bude zobrazena o 10 sekund", Toast.LENGTH_SHORT).show();
 				viewPillsNoon(view);
 			}
 		});

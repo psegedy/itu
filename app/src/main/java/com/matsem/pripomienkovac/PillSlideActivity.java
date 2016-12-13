@@ -191,7 +191,7 @@ public class PillSlideActivity extends AppCompatActivity {
     }
 
     public void viewBeforeMeal(View view){
-        Toast toast = Toast.makeText(PillSlideActivity.this, "Požívajte pred jedlom.", Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(PillSlideActivity.this, R.string.before, Toast.LENGTH_LONG);
         ViewGroup group = (ViewGroup) toast.getView();
         TextView messageTextView = (TextView) group.getChildAt(0);
         messageTextView.setTextSize(33);
@@ -199,7 +199,7 @@ public class PillSlideActivity extends AppCompatActivity {
     }
 
     public void viewWithMeal(View view){
-        Toast toast = Toast.makeText(PillSlideActivity.this, "Požívajte s jedlom.", Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(PillSlideActivity.this, R.string.with, Toast.LENGTH_LONG);
         ViewGroup group = (ViewGroup) toast.getView();
         TextView messageTextView = (TextView) group.getChildAt(0);
         messageTextView.setTextSize(33);
@@ -207,7 +207,7 @@ public class PillSlideActivity extends AppCompatActivity {
     }
 
     public void viewAfterMeal(View view){
-        Toast toast = Toast.makeText(PillSlideActivity.this, "Požívajte po jedle.", Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(PillSlideActivity.this, R.string.after, Toast.LENGTH_LONG);
         ViewGroup group = (ViewGroup) toast.getView();
         TextView messageTextView = (TextView) group.getChildAt(0);
         messageTextView.setTextSize(33);

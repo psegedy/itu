@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_pill">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,7 +23,6 @@
                 android:textColor="@color/dot_light"
                 android:textSize="30dp"
                 android:layout_margin="10dp"/>
-
         </LinearLayout>
         <View
             android:layout_width="match_parent"
@@ -118,12 +116,6 @@
                     android:alpha=".5"
                     android:background="@color/dot_light" />
                 </LinearLayout>
-
-
-
         </LinearLayout>
-
     </LinearLayout>
-
-
 </RelativeLayout>

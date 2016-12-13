@@ -146,7 +146,7 @@ public class TakePillsActivity extends AppCompatActivity {
     }
 
     public void viewBeforeMeal(View view) {
-        Toast toast = Toast.makeText(TakePillsActivity.this, "Požívajte pred jedlom.", Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(TakePillsActivity.this, R.string.before, Toast.LENGTH_LONG);
         ViewGroup group = (ViewGroup) toast.getView();
         TextView messageTextView = (TextView) group.getChildAt(0);
         messageTextView.setTextSize(33);
@@ -154,7 +154,7 @@ public class TakePillsActivity extends AppCompatActivity {
     }
 
     public void viewWithMeal(View view) {
-        Toast toast = Toast.makeText(TakePillsActivity.this, "Požívajte s jedlom.", Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(TakePillsActivity.this, R.string.with, Toast.LENGTH_LONG);
         ViewGroup group = (ViewGroup) toast.getView();
         TextView messageTextView = (TextView) group.getChildAt(0);
         messageTextView.setTextSize(33);
@@ -162,7 +162,7 @@ public class TakePillsActivity extends AppCompatActivity {
     }
 
     public void viewAfterMeal(View view) {
-        Toast toast = Toast.makeText(TakePillsActivity.this, "Požívajte po jedle.", Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(TakePillsActivity.this, R.string.after, Toast.LENGTH_LONG);
         ViewGroup group = (ViewGroup) toast.getView();
         TextView messageTextView = (TextView) group.getChildAt(0);
         messageTextView.setTextSize(33);
@@ -198,7 +198,7 @@ public class TakePillsActivity extends AppCompatActivity {
         }
 
         if (taken == 4) {
-            Toast toast = Toast.makeText(TakePillsActivity.this, "Užili ste všetky lieky!\nLen tak ďalej!", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(TakePillsActivity.this, R.string.huray, Toast.LENGTH_LONG);
             ViewGroup group = (ViewGroup) toast.getView();
             TextView messageTextView = (TextView) group.getChildAt(0);
             messageTextView.setTextSize(31);
@@ -209,5 +209,4 @@ public class TakePillsActivity extends AppCompatActivity {
             finish();
         }
     }
-
 }

@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_pill">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,12 +10,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/icon_pexeso"/>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -25,20 +22,15 @@
                 android:textSize="25dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"/>
-
         </LinearLayout>
-
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:alpha=".5"
             android:background="@color/dot_light" />
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@mipmap/pexeso"/>
-
     </LinearLayout>
-
 </RelativeLayout>
