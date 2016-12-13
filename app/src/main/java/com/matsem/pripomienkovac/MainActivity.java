@@ -98,21 +98,22 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	private Notification getNotification() {
-
-		Uri alarmSound = RingtoneManager.getDefaultUri(R.raw.alarm);
-		NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
+		long vibrator[] = { 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000,
+				1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000};
+		Notification notification = new NotificationCompat.Builder(this)
 				.setSmallIcon(R.drawable.pill_app_icon)
 				.setContentTitle("Pripomienkovač")
 				.setContentText("Zoberte vaše lieky!")
-				.setAutoCancel(false)
+				.setAutoCancel(true)
+				.setOngoing(true)
 				.setSmallIcon(R.drawable.pill_app_icon)
 				.setContentIntent(this.getNotificationIntent())
-				.setDefaults(Notification.DEFAULT_VIBRATE)
-				.setSound(alarmSound);
-		Notification notification = builder.build();
-		notification.sound = Uri.parse("android.resource://"
-				+ this.getPackageName() + "/" + R.raw.alarm);
-
+				.setCategory(Notification.CATEGORY_REMINDER)
+				.setPriority(Notification.PRIORITY_MAX)
+				.setVibrate(vibrator)
+				.setFullScreenIntent(this.getNotificationIntent(), false)
+				.setSound(Uri.parse("android.resource://" + this.getPackageName() + "/" + R.raw.alarm))
+				.build();
 		return notification;
 	}
 

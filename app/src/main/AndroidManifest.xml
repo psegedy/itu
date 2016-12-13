@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
 
+        <uses-permission android:name="android.permission.VIBRATE"/>
+
         <receiver android:name=".NotificationPublisher" />
 
         <activity
